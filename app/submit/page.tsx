@@ -52,7 +52,7 @@ export default function SubmitPage() {
 
   const addTag = () => {
     const tags = parseTags(tagInput);
-    const merged = [...new Set([...form.tags, ...tags])].slice(0, 10);
+    const merged = Array.from(new Set([...form.tags, ...tags])).slice(0, 10);
     update('tags', merged);
     setTagInput('');
   };
