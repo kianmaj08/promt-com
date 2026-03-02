@@ -20,7 +20,7 @@ const config: Config = {
         "muted-dark": "#9ca3af",
       },
       fontFamily: {
-        sans: ["var(--font-geist-sans)", "Inter", "system-ui", "sans-serif"],
+        sans: ["var(--font-sora)", "Sora", "system-ui", "sans-serif"],
         mono: ["var(--font-geist-mono)", "monospace"],
       },
       transitionDuration: {
