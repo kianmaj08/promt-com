@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg: #ffffff;
+    --color-bg-card: #ffffff;
+    --color-text: #0a0a0a;
+    --color-accent: #f5c518;
+    --color-border: #e5e5e5;
+    --color-muted: #6b7280;
+  }
+
+  .dark {
+    --color-bg: #0a0a0a;
+    --color-bg-card: #1a1a1a;
+    --color-text: #ffffff;
+    --color-accent: #f5c518;
+    --color-border: #2a2a2a;
+    --color-muted: #9ca3af;
+  }
+
+  * {
+    @apply border-border-light dark:border-border-dark;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-geist-sans), Inter, system-ui, sans-serif;
+    transition: background-color 200ms, color 200ms;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-muted);
+  }
+}
+
+@layer utilities {
+  .bg-page {
+    background-color: var(--color-bg);
+  }
+  .bg-card {
+    background-color: var(--color-bg-card);
+  }
+  .text-main {
+    color: var(--color-text);
+  }
+  .text-accent {
+    color: var(--color-accent);
+  }
+  .border-default {
+    border-color: var(--color-border);
+  }
+  .text-muted {
+    color: var(--color-muted);
+  }
+  .accent-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-[#F5C518] focus:ring-offset-2;
+  }
+  .transition-default {
+    transition: all 200ms ease;
+  }
+}
