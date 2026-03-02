@@ -38,7 +38,7 @@ export default function SubmitPage() {
   const [tagInput, setTagInput] = useState('');
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [evaluation, setEvaluation] = useState<AiFeedback | null>(null);
-  const [resultStatus, setResultStatus] = useState<PromptStatus>('published');
+  const [resultStatus, setResultStatus] = useState<'published' | 'published_with_note' | 'rejected'>('published');
   const [promptId, setPromptId] = useState<string | null>(null);
   const [showPreview, setShowPreview] = useState(false);
 
